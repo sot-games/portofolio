@@ -4,6 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sot_ – Roblox Developer</title>
+<meta name="description" content="Sot_ is a Roblox developer building games, apps and tools. Projects: My Pet Zoo, a voice ATC assistant and a Bluey port for Android and Windows.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sot_ | Roblox developer">
+<meta property="og:description" content="Games, apps and tools in Luau, Python and HTML. Bluey for Android and Windows launches October 30.">
+<meta name="twitter:card" content="summary_large_image">
+<!-- For a picture in Discord link previews, upload preview.png (1200x630) and add:
+<meta property="og:image" content="https://YOUR-SITE-URL/preview.png"> -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='43' font-size='30' font-family='monospace' font-weight='700' text-anchor='middle' fill='%237CD4FF'%3ES_%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=JetBrains+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -58,7 +67,118 @@ pre .ln.on{opacity:1;transform:none}
 .facts li{border-left:2px solid var(--amber);padding:.1rem .8rem}
 .facts span{display:block;font-size:.8rem;color:var(--dim)}
 .facts b{font:600 1rem var(--body)}
+.release{grid-column:1/-1;margin-top:.4rem}
+.release[hidden]{display:none}
+.release #widget{margin-top:1.1rem;max-width:100%;overflow-x:auto}
+.release iframe{border:0;max-width:100%}
 .when{grid-column:1/-1;color:var(--dim)!important;font-size:.9rem}
+.pill{background:#101012;border:1px solid #1e1e22;border-radius:28px;padding:1.4rem 1.6rem}
+.bio{font:600 1.05rem var(--body);margin-bottom:1rem}
+.arow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.prof{display:flex;align-items:center;gap:1rem}
+.pav{position:relative;flex:none;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:#5865f2;font:800 1.3rem var(--display);color:#fff}
+.dot{position:absolute;right:-1px;bottom:-1px;width:18px;height:18px;border-radius:50%;background:#7a7d85;border:4px solid #101012;box-sizing:content-box;margin:-4px}
+.pname{font:600 1.2rem var(--body)}
+.pnote{font:italic 400 .9rem var(--body);color:var(--dim)}
+.tz{position:relative;display:flex;align-items:center;gap:1.1rem}
+.tzlabel{position:absolute;top:.9rem;right:1.2rem;font-size:.75rem;color:#55575e}
+.clock{width:68px;height:68px;flex:none}
+.tztime{font:600 1.35rem var(--mono);font-variant-numeric:tabular-nums}
+.tzdate{font:600 .85rem var(--body);color:#b4b6bd}
+.tzyou{font-size:.75rem;color:#6a6c74}
+.chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.2rem}
+.chips li{background:#101012;border:1px solid #1e1e22;border-radius:999px;padding:.4rem 1rem;font:600 .9rem var(--body)}
+@media(max-width:700px){.arow{grid-template-columns:1fr}}
+.bar2{cursor:pointer;height:4px}
+.shot{grid-column:1/-1;position:relative;aspect-ratio:16/9;max-height:300px;width:100%;border-radius:10px;overflow:hidden;background:#000;border:1px solid var(--line);margin-bottom:.4rem;grid-row:1}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.shot span{display:none}
+.shot.empty{background:radial-gradient(circle at 20% 20%,#16222c,#0a0a0c 70%);display:grid;place-items:center;aspect-ratio:21/6}
+.shot.empty img{display:none}
+.shot.empty span{display:block;color:#4b4e57;font:500 .85rem var(--mono)}
+.plinks{grid-column:1/-1;display:flex;gap:.6rem;flex-wrap:wrap}
+.plinks:empty{display:none}
+.btn.sm{padding:.45rem 1rem;font-size:.9rem}
+.avail{display:inline-flex;align-items:center;gap:.5rem;font:600 .85rem var(--body);color:var(--mint);border:1px solid #244a30;border-radius:999px;padding:.25rem .8rem;margin-bottom:1rem}
+.avail[hidden]{display:none}
+.avail i{width:8px;height:8px;border-radius:50%;background:var(--mint);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.stats{list-style:none;padding:0;display:flex;gap:1rem;flex-wrap:wrap;margin:-.8rem 0 1.5rem}
+.stats[hidden]{display:none}
+.stats li{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:.7rem 1.2rem}
+.stats b{display:block;font:800 1.5rem var(--display)}
+.stats span{font-size:.8rem;color:var(--dim)}
+.timeline{list-style:none;padding:0 0 0 1.6rem;border-left:2px solid var(--line);display:grid;gap:1.6rem}
+.timeline li{position:relative}
+.timeline li::before{content:"";position:absolute;left:calc(-1.6rem - 7px);top:.35rem;width:12px;height:12px;border-radius:50%;background:#000;border:2px solid var(--ice)}
+.timeline li.up::before{border-color:var(--amber);background:var(--amber);box-shadow:0 0 14px rgba(255,180,84,.6)}
+.timeline time{font:500 .8rem var(--mono);color:var(--dim)}
+.timeline li.up time{color:var(--amber)}
+.timeline h3{font:800 1.25rem var(--display);margin:.15rem 0}
+.timeline p{color:#B9BBC2;max-width:60ch}
+.listen{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.listen[hidden]{display:none}
+.listen img{border-radius:10px;object-fit:cover;flex:none}
+.lmeta{flex:1;min-width:0}
+.lhead{font-size:.75rem;color:var(--mint)}
+.lsong{font:600 1.05rem var(--body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lartist{font-size:.9rem;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lbar{height:3px;background:#26262c;border-radius:2px;margin-top:.5rem;overflow:hidden}
+#l-fill{height:100%;width:0;background:var(--mint)}
+.cbtns{display:flex;flex-wrap:wrap;gap:.8rem}
+.cbtns .btn{cursor:pointer;font:600 1rem var(--body);background:transparent}
+.cbtns .btn.main{background:var(--ice)}
+.toast{position:fixed;left:50%;bottom:1.5rem;transform:translate(-50%,20px);background:#fff;color:#000;font-weight:600;padding:.6rem 1.2rem;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:20}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){.avail i{animation:none}.toast{transition:none}}
+.sw{display:inline-flex;gap:.45rem;margin-left:1.4rem;vertical-align:middle}
+.sw button{width:16px;height:16px;border-radius:50%;border:2px solid transparent;background:var(--c);cursor:pointer;padding:0;opacity:.8}
+.sw button:hover{opacity:1}
+.sw button.on{border-color:#fff;opacity:1}
+.faq{display:grid;gap:.7rem;max-width:720px}
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:.1rem 1.2rem}
+.faq summary{cursor:pointer;padding:.9rem 0;font:600 1.05rem var(--body);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--ice);font:500 1.3rem var(--mono);line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{padding:0 0 1rem;color:#B9BBC2}
+#patch[hidden]{display:none}
+.ph{font:800 1.4rem var(--display);margin:2.2rem 0 1rem}
+.pv{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1rem 1.3rem;margin-bottom:.8rem;max-width:720px}
+.pv b{font:500 .95rem var(--mono);color:var(--amber)}
+.pv time{font-size:.8rem;color:var(--dim);margin-left:.7rem}
+.pv ul{margin:.5rem 0 0 1.1rem;color:#B9BBC2}
+.term{background:#050507;border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem;font:400 .92rem/1.7 var(--mono);height:340px;overflow-y:auto;cursor:text}
+.term .o{white-space:pre-wrap;word-break:break-word;color:#c9cbd1}
+.term .e{color:var(--rose)}
+.term .cm{color:var(--dim)}
+.term a{color:var(--ice)}
+.tline{display:flex;gap:.6rem;align-items:center}
+.pr{color:var(--mint);white-space:nowrap}
+#t-in{flex:1;min-width:0;background:none;border:0;color:#fff;font:inherit;outline:none;caret-color:var(--ice)}
+.about{position:relative;overflow:hidden;height:440px;border-radius:28px;border:1px solid #26262c;background:#0a0a0c;isolation:isolate}
+.blobs i{position:absolute;border-radius:50%;filter:blur(55px);opacity:.75;animation:drift 18s ease-in-out infinite alternate}
+.blobs i:nth-child(1){width:55%;height:70%;left:-8%;top:-10%;background:#3d6b86}
+.blobs i:nth-child(2){width:50%;height:65%;right:-10%;bottom:-20%;background:#9a7a3c;animation-delay:-6s}
+.blobs i:nth-child(3){width:35%;height:45%;left:40%;top:30%;background:#7a3f5c;opacity:.45;animation-delay:-11s}
+@keyframes drift{to{transform:translate(8%,10%) scale(1.15)}}
+.about::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.1) 40%,rgba(0,0,0,.35));z-index:-1;pointer-events:none}
+.ahead{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;position:relative;z-index:2}
+.avatar{flex:none;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;font:800 1.3rem var(--display);color:#001018;background:conic-gradient(from 200deg,var(--ice),var(--amber),var(--rose),var(--ice));box-shadow:0 0 0 3px rgba(255,255,255,.12)}
+.ameta{flex:1;min-width:0}
+.atitle{font:600 1.05rem var(--body)}
+.aprog{display:flex;align-items:center;gap:.7rem;font:500 .85rem var(--body);color:#cfd1d6;margin-top:.35rem}
+.bar2{flex:1;height:2px;background:rgba(255,255,255,.25);border-radius:2px;overflow:hidden}
+#a-fill{height:100%;width:0;background:#fff;transition:width .6s ease}
+.aprog button{background:none;border:0;color:#fff;cursor:pointer;padding:.25rem;display:grid;place-items:center;border-radius:6px;opacity:.85}
+.aprog button:hover{opacity:1;background:rgba(255,255,255,.12)}
+.alines{position:absolute;left:0;right:0;top:0;padding:0 2.2rem;transition:transform .7s cubic-bezier(.3,.8,.2,1);z-index:1}
+.aline{height:62px;display:flex;align-items:center;font:800 1.35rem var(--display);letter-spacing:-.01em;cursor:pointer;color:#fff;opacity:.2;filter:blur(4px);transition:opacity .5s,filter .5s,transform .5s;transform-origin:left center}
+.aline.d0{opacity:1;filter:none;transform:scale(1.04)}
+.aline.d1{opacity:.5;filter:blur(1px)}
+.aline.d2{opacity:.32;filter:blur(2.5px)}
+@media(max-width:560px){.aline{font-size:1.1rem}.aprog{gap:.4rem;font-size:.75rem}.about{height:400px}}
+@media(prefers-reduced-motion:reduce){.blobs i{animation:none}.alines,.aline,#a-fill{transition:none}}
 section{padding:3.5rem 0}
 h2{font:800 2.2rem/1.1 var(--display);letter-spacing:-.02em;margin-bottom:.6rem}
 .sub{color:var(--dim);margin-bottom:2rem;max-width:55ch}
@@ -68,7 +188,7 @@ h2{font:800 2.2rem/1.1 var(--display);letter-spacing:-.02em;margin-bottom:.6rem}
 .proj:hover{border-color:#3a3a42}
 .proj h3{font:800 1.5rem/1.2 var(--display)}
 .proj p{grid-column:1;color:#B9BBC2;max-width:62ch}
-.badge{grid-row:1;grid-column:2;align-self:start;font:500 .78rem var(--mono);padding:.25rem .65rem;border-radius:999px;border:1px solid var(--line);color:var(--dim)}
+.badge{grid-row:2;grid-column:2;align-self:start;font:500 .78rem var(--mono);padding:.25rem .65rem;border-radius:999px;border:1px solid var(--line);color:var(--dim)}
 .badge.live{color:var(--mint);border-color:#244a30}
 .tags{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0;margin-top:.4rem}
 .tags li{font:400 .82rem var(--mono);color:var(--ice);background:rgba(124,212,255,.07);border-radius:6px;padding:.2rem .6rem}
@@ -84,6 +204,8 @@ h2{font:800 2.2rem/1.1 var(--display);letter-spacing:-.02em;margin-bottom:.6rem}
 .tile h3{font:800 2.3rem/1 var(--display);letter-spacing:-.02em;margin-bottom:.5rem}
 .tile p{color:#B9BBC2}
 
+.contact{border:1px solid var(--line);border-radius:14px;padding:2.5rem;background:linear-gradient(180deg,var(--panel),#000)}
+.contact h2{font-size:2.4rem}
 footer{padding:2rem 0 3rem;color:var(--dim);font-size:.9rem;border-top:1px solid var(--line);margin-top:2rem}
 
 @media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:3rem}.proj{grid-template-columns:1fr}.badge{grid-column:1;grid-row:auto;justify-self:start}}
@@ -91,11 +213,12 @@ footer{padding:2rem 0 3rem;color:var(--dim);font-size:.9rem;border-top:1px solid
 </style>
 </head>
 <body>
-<nav><div class="wrap"><b>Sot_</b><div><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+<nav><div class="wrap"><b>Sot_</b><div><a href="#about">About</a><a href="#projects">Projects</a><a href="#devlog">Devlog</a><a href="#terminal">Terminal</a><a href="#skills">Skills</a><a href="#contact">Contact</a><span class="sw" role="group" aria-label="Accent color"><button data-c="ice" style="--c:#7CD4FF" aria-label="Blue"></button><button data-c="amber" style="--c:#FFB454" aria-label="Amber"></button><button data-c="rose" style="--c:#FF7A9C" aria-label="Pink"></button><button data-c="mint" style="--c:#9BE7B0" aria-label="Green"></button></span></div></div></nav>
 
 <main>
 <header class="wrap hero">
   <div>
+    <span class="avail" id="avail" hidden><i></i>Open for commissions</span>
     <h1>I love writing code, and I build Roblox games.</h1>
     <p>Gameplay systems, admin tools and AI assistants, written in Luau. Add a sentence about yourself here.</p>
     <div class="btns"><a class="btn main" href="#projects">See my work</a><a class="btn" href="#contact">Get in touch</a></div>
@@ -108,7 +231,7 @@ footer{padding:2rem 0 3rem;color:var(--dim);font-size:.9rem;border-top:1px solid
 <span class="ln">  platform <span class="k">=</span> <span class="s">"Roblox Studio"</span>,</span>
 <span class="ln">  loves <span class="k">=</span> <span class="s">"coding"</span>,</span>
 <span class="ln">  building <span class="k">=</span> {</span>
-<span class="ln">    <span class="s">"Dog hatching game"</span>,</span>
+<span class="ln">    <span class="s">"My Pet Zoo"</span>,</span>
 <span class="ln">    <span class="s">"Voice ATC assistant"</span>,</span>
 <span class="ln">  },</span>
 <span class="ln">}</span>
@@ -117,21 +240,81 @@ footer{padding:2rem 0 3rem;color:var(--dim);font-size:.9rem;border-top:1px solid
   </div>
 </header>
 
+<section id="about"><div class="wrap">
+  <h2>About me</h2>
+  <div class="pill bio">Hi, I'm Sot_. I build Roblox games and apps, and I love coding.</div>
+  <div class="arow">
+    <div class="pill prof">
+      <div class="pav"><span>S_</span><i class="dot"></i></div>
+      <div><div class="pname">Sot_</div><div class="pnote">building Bluey for Android and Windows</div></div>
+    </div>
+    <div class="pill tz">
+      <span class="tzlabel">Timezone</span>
+      <svg class="clock" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48" fill="#0b0b0d" stroke="#2a2a30" stroke-width="2"/><g id="ticks" stroke="#6b6d75" stroke-linecap="round"></g><line id="hh" x1="50" y1="50" x2="50" y2="26" stroke="#fff" stroke-width="4" stroke-linecap="round"/><line id="mh" x1="50" y1="50" x2="50" y2="14" stroke="#fff" stroke-width="3" stroke-linecap="round"/><line id="sh" x1="50" y1="56" x2="50" y2="12" stroke="#ff3b30" stroke-width="1.5" stroke-linecap="round"/><circle cx="50" cy="50" r="3" fill="#ff3b30"/></svg>
+      <div>
+        <div class="tztime" id="tz-time">--:--:--</div>
+        <div class="tzdate" id="tz-date"></div>
+        <div class="tzyou" id="tz-you"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pill listen" id="listen" hidden>
+    <img id="l-art" alt="" width="64" height="64">
+    <div class="lmeta"><span class="lhead">Listening to Spotify</span><div class="lsong" id="l-song"></div><div class="lartist" id="l-artist"></div>
+    <div class="lbar"><div id="l-fill"></div></div></div>
+  </div>
+  <ul class="chips"><li>Python</li><li>HTML</li><li>Luau</li></ul>
+
+  <div class="about" id="about-card">
+    <div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="ahead">
+      <div class="avatar" aria-hidden="true">S_</div>
+      <div class="ameta">
+        <div class="atitle" id="a-title">About Sot_</div>
+        <div class="aprog">
+          <span id="a-cur">0:00</span>
+          <div class="bar2" id="a-bar"><div id="a-fill"></div></div>
+          <span id="a-tot">0:00</span>
+          <button id="a-prev" aria-label="Previous line"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M6 6h2v12H6zM9.5 12 18 6v12z"/></svg></button>
+          <button id="a-play" aria-label="Play"><svg viewBox="0 0 24 24" width="20" height="20"><path id="a-ico" fill="currentColor" d="M8 5v14l11-7z"/></svg></button>
+          <button id="a-next" aria-label="Next line"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M16 6h2v12h-2zM6 18V6l8.5 6z"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="alines" id="a-lines">
+      <div class="aline">Hey, I'm Sot_</div>
+      <div class="aline">I love writing code</div>
+      <div class="aline">I build Roblox games in Luau</div>
+      <div class="aline">I know HTML, Python and Luau</div>
+      <div class="aline">My Pet Zoo is hatching pets</div>
+      <div class="aline">A voice ATC is taking off</div>
+      <div class="aline">Bluey is coming to Android and Windows</div>
+      <div class="aline">Thanks for stopping by</div>
+    </div>
+  </div>
+</div></section>
+
 <section id="projects"><div class="wrap">
   <h2>Projects</h2>
   <p class="sub">Things I've built and am building.</p>
+  <ul class="stats" id="stats" hidden></ul>
   <div class="projects">
     <article class="proj">
-      <h3>Dog hatching game</h3><span class="badge live">in progress</span>
-      <p>Players hatch eggs into dogs, collect them and build up their pack.</p>
+      <div class="shot"><img src="screenshots/pet-zoo.png" alt="My Pet Zoo screenshot" loading="lazy" onerror="this.parentNode.classList.add('empty')"><span>Screenshot coming soon</span></div>
+      <h3>My Pet Zoo</h3><span class="badge live">in progress</span>
+      <p>Players hatch eggs into pets, collect them and build up their own zoo.</p>
       <ul class="tags"><li>Luau</li><li>Roblox Studio</li></ul>
+      <div class="plinks" data-key="zoo"></div>
     </article>
     <article class="proj">
+      <div class="shot"><img src="screenshots/atc.png" alt="Voice ATC assistant screenshot" loading="lazy" onerror="this.parentNode.classList.add('empty')"><span>Screenshot coming soon</span></div>
       <h3>Voice ATC assistant</h3><span class="badge live">in progress</span>
       <p>A standalone Windows app that works as air traffic control for the Roblox flight games Project Flight and Pilot Training Simulator. It runs next to the game and uses the Gemini API for voice.</p>
       <ul class="tags"><li>Gemini API</li><li>Windows app</li><li>Voice</li></ul>
+      <div class="plinks" data-key="atc"></div>
     </article>
     <article class="proj soon">
+      <div class="shot"><img src="screenshots/bluey.png" alt="Bluey screenshot" loading="lazy" onerror="this.parentNode.classList.add('empty')"><span>Screenshot coming soon</span></div>
       <h3>Bluey app port</h3><span class="badge soon">soon</span>
       <p>I'm porting the Bluey app to Android and Windows. Coming soon for everyone on October 30.</p>
       <ul class="facts">
@@ -147,8 +330,36 @@ footer{padding:2rem 0 3rem;color:var(--dim);font-size:.9rem;border-top:1px solid
         <div><b id="s">00</b><span>seconds</span></div>
       </div>
       <ul class="tags"><li>Android</li><li>Windows</li><li>Porting</li></ul>
+      <div class="release" id="release" hidden>
+        <a class="btn main" href="https://sot-games.itch.io/bluey-windows-android" target="_blank" rel="noopener">Get Bluey on itch.io</a>
+        <div id="widget"></div>
+      </div>
       <p class="when" id="when">Launching October 30</p>
     </article>
+  </div>
+</div></section>
+
+<section id="devlog"><div class="wrap">
+  <h2>Devlog</h2>
+  <p class="sub">What I'm working on, newest first.</p>
+  <ol class="timeline">
+    <li class="up"><time>October 30, 2026</time><h3>Bluey launches</h3><p>The Bluey app comes to Android and Windows, free on itch.io.</p></li>
+    <li><time>In progress</time><h3>My Pet Zoo</h3><p>Players hatch eggs into pets and build their own zoo.</p></li>
+    <li><time>In progress</time><h3>Voice ATC assistant</h3><p>A standalone air traffic controller for Project Flight and Pilot Training Simulator, built with the Gemini API.</p></li>
+  </ol>
+</div></section>
+
+<section id="bluey-faq"><div class="wrap">
+  <h2>Bluey FAQ</h2>
+  <p class="sub">Quick answers about the Bluey app port.</p>
+  <div class="faq" id="faq">
+    <details open><summary>When does it launch?</summary><p>October 30, 2026. The countdown in the projects section shows the time left.</p></details>
+    <details><summary>Which platforms is it on?</summary><p>Android and Windows.</p></details>
+    <details><summary>Where can I get it?</summary><p>On itch.io: <a href="https://sot-games.itch.io/bluey-windows-android" target="_blank" rel="noopener">sot-games.itch.io/bluey-windows-android</a>.</p></details>
+  </div>
+  <div id="patch" hidden>
+    <h3 class="ph">Patch notes</h3>
+    <div id="patch-list"></div>
   </div>
 </div></section>
 
@@ -162,16 +373,55 @@ footer{padding:2rem 0 3rem;color:var(--dim);font-size:.9rem;border-top:1px solid
   </div>
 </div></section>
 
+<section id="terminal"><div class="wrap">
+  <h2>Terminal</h2>
+  <p class="sub">Click the box and type <code>help</code>.</p>
+  <div class="term" id="term">
+    <div id="t-out" aria-live="polite"></div>
+    <div class="tline"><span class="pr">sot_@portfolio:~$</span><input id="t-in" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal input"></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="contact">
+    <h2>Let's build something.</h2>
+    <p class="sub">Pick whatever is easiest.</p>
+    <div class="cbtns" id="cbtns"></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">&copy; Sot_</div></footer>
+<div class="toast" id="toast" role="status">Copied!</div>
+
 <script>
+/* ===== EDIT ME: fill these in and the matching parts of the page switch on ===== */
+var CONFIG={
+  OPEN_FOR_WORK:false,            /* true shows the green "Open for commissions" badge */
+  EMAIL:'sotgames1@proton.me',                       /* e.g. 'you@example.com' */
+  DISCORD:'sot_games',                     /* your Discord username, copied when someone clicks the button */
+  ROBLOX_PROFILE:'https://www.roblox.com/users/2994012714/profile',              /* e.g. 'https://www.roblox.com/users/123/profile' */
+  DISCORD_ID:'1216325932772757555',                  /* your numeric Discord user ID, turns on the live Spotify card (needs Lanyard) */
+  LINKS:{ zoo:{url:'',label:'Play on Roblox'}, atc:{url:'',label:'Download'} },
+  FAQ_EXTRA:[],                   /* e.g. [{q:'Is it free?',a:'Yes.'}] */
+  PATCH_NOTES:[],                 /* e.g. [{v:'1.0',date:'Oct 30, 2026',notes:['First release']}] */
+  STATS:[]                        /* e.g. [{n:'12K',l:'visits'},{n:'3',l:'projects'}] */
+};
 (function(){
   var lines=document.querySelectorAll('#code .ln'),i=0;
   function next(){ if(i<lines.length){ lines[i++].classList.add('on'); setTimeout(next,130); } }
   setTimeout(next,300);
   var target=new Date(2026,9,30,0,0,0).getTime();
+  function reveal(){
+    var r=document.getElementById('release'),w=document.getElementById('widget');
+    if(!w.firstChild){
+      w.innerHTML='<iframe frameborder="0" src="https://itch.io/embed/5258107" width="552" height="167"><a href="https://sot-games.itch.io/bluey-windows-android">Bluey (Recreated) by Sot_</a></iframe>';
+    }
+    r.hidden=false;
+  }
   function pad(n){return String(n).padStart(2,'0')}
   function tick(){
     var l=target-Date.now();
-    if(l<=0){document.getElementById('count').style.display='none';document.getElementById('when').textContent='Bluey is out now!';document.querySelector('.badge.soon').textContent='out now';return true;}
+    if(l<=0){document.getElementById('count').style.display='none';document.getElementById('when').textContent='Bluey is out now!';reveal();document.querySelector('.badge.soon').textContent='out now';return true;}
     document.getElementById('d').textContent=pad(Math.floor(l/864e5));
     document.getElementById('h').textContent=pad(Math.floor(l%864e5/36e5));
     document.getElementById('m').textContent=pad(Math.floor(l%36e5/6e4));
@@ -179,6 +429,166 @@ footer{padding:2rem 0 3rem;color:var(--dim);font-size:.9rem;border-top:1px solid
     return false;
   }
   if(!tick()){var iv=setInterval(function(){if(tick())clearInterval(iv)},1000);}
+  /* ----- accent colors, FAQ extras, patch notes, terminal ----- */
+  (function(){
+    var C=CONFIG,root=document.documentElement,ACC={ice:'#7CD4FF',amber:'#FFB454',rose:'#FF7A9C',mint:'#9BE7B0'},sw=document.querySelectorAll('.sw button');
+    function setAccent(n,save){
+      if(!ACC[n])return false;
+      root.style.setProperty('--ice',ACC[n]);
+      sw.forEach(function(b){b.classList.toggle('on',b.dataset.c===n)});
+      if(save){try{localStorage.setItem('accent',n)}catch(e){}}
+      return true;
+    }
+    sw.forEach(function(b){b.onclick=function(){setAccent(b.dataset.c,true)}});
+    var saved=null;try{saved=localStorage.getItem('accent')}catch(e){}
+    setAccent(saved&&ACC[saved]?saved:'ice',false);
+
+    function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+    C.FAQ_EXTRA.forEach(function(x){var d=el('details'),sm=el('summary','',x.q);d.appendChild(sm);d.appendChild(el('p','',x.a));document.getElementById('faq').appendChild(d)});
+    if(C.PATCH_NOTES.length){
+      var pl=document.getElementById('patch-list');
+      C.PATCH_NOTES.forEach(function(n){var b=el('div','pv'),h=el('div');h.appendChild(el('b','','v'+n.v));if(n.date)h.appendChild(el('time','',n.date));b.appendChild(h);
+        var u=el('ul');(n.notes||[]).forEach(function(t){u.appendChild(el('li','',t))});b.appendChild(u);pl.appendChild(b)});
+      document.getElementById('patch').hidden=false;
+    }
+
+    /* terminal */
+    var out=document.getElementById('t-out'),inp=document.getElementById('t-in'),box=document.getElementById('term'),hist=[],hi=0;
+    function print(t,c){var d=el('div','o'+(c?' '+c:''),t);out.appendChild(d);box.scrollTop=box.scrollHeight}
+    var CMDS={
+      help:function(){return ['Commands:','  about      who I am','  projects   what I am building','  skills     what I know','  bluey      launch countdown','  links      where to find me','  theme NAME ice, amber, rose or mint','  clear      clear the screen']},
+      about:function(){return ["Hi, I'm Sot_. I build Roblox games and apps, and I love coding."]},
+      whoami:function(){return ['Sot_']},
+      projects:function(){return ['My Pet Zoo           hatch eggs into pets and build your zoo','Voice ATC assistant   air traffic control for Roblox flight games','Bluey app port        Android and Windows, launches October 30']},
+      skills:function(){return ['HTML','Python','Luau']},
+      bluey:function(){var l=target-Date.now();if(l<=0)return ['Bluey is out now! Get it at sot-games.itch.io/bluey-windows-android'];
+        return ['Bluey launches October 30, 2026 on Android and Windows.','Time left: '+Math.floor(l/864e5)+'d '+Math.floor(l%864e5/36e5)+'h '+Math.floor(l%36e5/6e4)+'m']},
+      links:function(){return ['itch.io: https://sot-games.itch.io']},
+      theme:function(a){if(!a[0])return ['Usage: theme ice | amber | rose | mint'];return setAccent(a[0],true)?['Theme set to '+a[0]+'.']:["Unknown theme '"+a[0]+"'. Try ice, amber, rose or mint."]},
+      clear:function(){out.textContent='';return []}
+    };
+    function run(v){
+      print('sot_@portfolio:~$ '+v,'cm');
+      var parts=v.trim().split(/\s+/),name=parts[0].toLowerCase();
+      if(!name)return;
+      var f=CMDS[name];
+      if(!f){print('command not found: '+name+'. Type help.','e');return}
+      f(parts.slice(1)).forEach(function(l){print(l)});
+    }
+    print('Welcome! Type help to see what I can do.');
+    box.addEventListener('click',function(){inp.focus()});
+    inp.addEventListener('keydown',function(e){
+      if(e.key==='Enter'){var v=inp.value;if(v.trim()){hist.push(v);hi=hist.length}run(v);inp.value=''}
+      else if(e.key==='ArrowUp'&&hist.length){hi=Math.max(0,hi-1);inp.value=hist[hi];e.preventDefault()}
+      else if(e.key==='ArrowDown'&&hist.length){hi=Math.min(hist.length,hi+1);inp.value=hist[hi]||'';e.preventDefault()}
+    });
+  })();
+
+  /* ----- config-driven extras ----- */
+  (function(){
+    var C=CONFIG;
+    function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+    if(C.OPEN_FOR_WORK)document.getElementById('avail').hidden=false;
+    document.querySelectorAll('.plinks').forEach(function(b){
+      var l=C.LINKS[b.dataset.key];
+      if(l&&l.url){var a=el('a','btn sm main',l.label);a.href=l.url;a.target='_blank';a.rel='noopener';b.appendChild(a)}
+    });
+    if(C.STATS.length){var st=document.getElementById('stats');C.STATS.forEach(function(x){var li=el('li');li.appendChild(el('b','',x.n));li.appendChild(el('span','',x.l));st.appendChild(li)});st.hidden=false}
+    var toast=document.getElementById('toast'),tt;
+    function note(m){toast.textContent=m;toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},1800)}
+    var cb=document.getElementById('cbtns');
+    if(C.DISCORD){var d=el('button','btn main','Copy Discord: '+C.DISCORD);d.type='button';
+      d.onclick=function(){var done=function(){note('Discord copied!')};
+        if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(C.DISCORD).then(done,function(){note(C.DISCORD)})}else note(C.DISCORD)};cb.appendChild(d)}
+    if(C.EMAIL){var m=el('a','btn','Email me');m.href='mailto:'+C.EMAIL;cb.appendChild(m)}
+    if(C.ROBLOX_PROFILE){var r=el('a','btn','Roblox profile');r.href=C.ROBLOX_PROFILE;r.target='_blank';r.rel='noopener';cb.appendChild(r)}
+    var i=el('a','btn'+(cb.children.length?'':' main'),'itch.io');i.href='https://sot-games.itch.io';i.target='_blank';i.rel='noopener';cb.appendChild(i);
+
+    /* live Spotify via Lanyard (Discord presence) */
+    if(C.DISCORD_ID){
+      var box=document.getElementById('listen'),art=document.getElementById('l-art'),song=document.getElementById('l-song'),
+          artist=document.getElementById('l-artist'),fill=document.getElementById('l-fill'),sp=null;
+      function paint(){if(!sp||!sp.timestamps)return;var t=sp.timestamps,f=(Date.now()-t.start)/(t.end-t.start);fill.style.width=Math.max(0,Math.min(1,f))*100+'%'}
+      function poll(){
+        fetch('https://api.lanyard.rest/v1/users/'+encodeURIComponent(C.DISCORD_ID)).then(function(r){return r.json()}).then(function(j){
+          var d=j&&j.data;sp=d&&d.listening_to_spotify?d.spotify:null;
+          if(sp){art.src=sp.album_art_url;song.textContent=sp.song;artist.textContent=sp.artist;box.hidden=false;paint()}else box.hidden=true;
+        }).catch(function(){box.hidden=true});
+      }
+      poll();setInterval(poll,15000);setInterval(paint,1000);
+    }
+  })();
+
+  /* About me: timezone clock */
+  (function(){
+    var TZ='Europe/Athens'; /* change to your timezone, e.g. 'America/New_York' */
+    var ticks=document.getElementById('ticks');
+    for(var i=0;i<60;i++){var a=i*6*Math.PI/180,big=i%5===0,r1=big?40:44,r2=47;
+      var l=document.createElementNS('http://www.w3.org/2000/svg','line');
+      l.setAttribute('x1',50+r1*Math.sin(a));l.setAttribute('y1',50-r1*Math.cos(a));
+      l.setAttribute('x2',50+r2*Math.sin(a));l.setAttribute('y2',50-r2*Math.cos(a));
+      l.setAttribute('stroke-width',big?1.6:.6);ticks.appendChild(l);}
+    function parts(d){var o={};new Intl.DateTimeFormat('en-GB',{timeZone:TZ,hour12:false,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit'}).formatToParts(d).forEach(function(x){o[x.type]=x.value});return o}
+    function p2(n){return String(n).padStart(2,'0')}
+    function tick(){
+      var now=new Date(),o=parts(now),h=+o.hour%24,m=+o.minute,sec=+o.second;
+      document.getElementById('tz-time').textContent=p2(h)+':'+p2(m)+':'+p2(sec);
+      document.getElementById('hh').setAttribute('transform','rotate('+((h%12)*30+m*.5)+' 50 50)');
+      document.getElementById('mh').setAttribute('transform','rotate('+(m*6+sec*.1)+' 50 50)');
+      document.getElementById('sh').setAttribute('transform','rotate('+(sec*6)+' 50 50)');
+      var ownerMin=(Date.UTC(+o.year,+o.month-1,+o.day,h,m,sec)-Math.floor(now/1000)*1000)/6e4,
+          visitorMin=-now.getTimezoneOffset(),diff=Math.round((ownerMin-visitorMin)/60*10)/10,
+          off=ownerMin/60,offTxt='GMT'+(off>=0?'+':'-')+Math.abs(off);
+      var dt=new Intl.DateTimeFormat('en-US',{timeZone:TZ,weekday:'short',month:'short',day:'numeric'}).format(now);
+      document.getElementById('tz-date').textContent=dt+' \u00b7 '+offTxt;
+      document.getElementById('tz-you').textContent=diff===0?'Same timezone as you':'Your time: '+now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})+' ('+(diff>0?'+':'')+diff+'h)';
+    }
+    tick();setInterval(tick,1000);
+  })();
+
+  /* About me: player. Put your own audio file next to this page and set src below. */
+  (function(){
+    var SONG={src:'song.mp3',title:''}; /* title shows in the card, e.g. 'My track' */
+    var card=document.getElementById('about-card'),box=document.getElementById('a-lines'),
+        ls=box.querySelectorAll('.aline'),LH=62,STEP=3,idx=0,timer=null,playing=false,audioMode=false,
+        fill=document.getElementById('a-fill'),cur=document.getElementById('a-cur'),tot=document.getElementById('a-tot'),
+        btn=document.getElementById('a-play'),ico=document.getElementById('a-ico'),bar=document.getElementById('a-bar'),
+        audio=new Audio(),PLAY='M8 5v14l11-7z',PAUSE='M7 5h4v14H7zM13 5h4v14h-4z';
+    function fmt(n){n=Math.floor(n);return Math.floor(n/60)+':'+String(n%60).padStart(2,'0')}
+    function line(i){
+      idx=(i+ls.length)%ls.length;
+      var mid=(card.clientHeight+90)/2;
+      box.style.transform='translateY('+(mid-idx*LH-LH/2)+'px)';
+      ls.forEach(function(l,k){var d=Math.abs(k-idx);l.className='aline'+(d<3?' d'+d:'')});
+    }
+    function prog(f,sec){fill.style.width=(f*100)+'%';cur.textContent=fmt(sec)}
+    function show(i){line(i);prog((idx+1)/ls.length,idx*STEP)}
+    function icon(on){playing=on;btn.setAttribute('aria-label',on?'Pause':'Play');ico.setAttribute('d',on?PAUSE:PLAY)}
+    function seekLine(i){i=(i+ls.length)%ls.length;if(audioMode){audio.currentTime=i/ls.length*audio.duration}else show(i)}
+    function play(){icon(true);if(audioMode){audio.play().catch(function(){icon(false)})}else{clearInterval(timer);timer=setInterval(function(){show(idx+1)},STEP*1000)}}
+    function pause(){icon(false);clearInterval(timer);if(audioMode)audio.pause()}
+    tot.textContent=fmt(ls.length*STEP);
+    audio.preload='metadata';audio.src=SONG.src;
+    audio.addEventListener('loadedmetadata',function(){
+      if(!isFinite(audio.duration))return;
+      clearInterval(timer);icon(false);audioMode=true;tot.textContent=fmt(audio.duration);
+      if(SONG.title)document.getElementById('a-title').textContent=SONG.title;
+      line(0);prog(0,0);
+    });
+    audio.addEventListener('timeupdate',function(){if(!audioMode)return;var f=audio.currentTime/audio.duration;line(Math.min(ls.length-1,Math.floor(f*ls.length)));prog(f,audio.currentTime)});
+    audio.addEventListener('ended',function(){icon(false);line(0);prog(0,0)});
+    btn.onclick=function(){playing?pause():play()};
+    document.getElementById('a-next').onclick=function(){seekLine(idx+1)};
+    document.getElementById('a-prev').onclick=function(){seekLine(idx-1)};
+    ls.forEach(function(l,k){l.onclick=function(){seekLine(k)}});
+    bar.onclick=function(e){var r=bar.getBoundingClientRect(),f=Math.max(0,Math.min(.999,(e.clientX-r.left)/r.width));if(audioMode){audio.currentTime=f*audio.duration}else show(Math.floor(f*ls.length))};
+    window.addEventListener('resize',function(){line(idx)});
+    show(0);
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if('IntersectionObserver' in window&&!reduce){
+      new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting&&!playing&&!audioMode&&!card.dataset.started){card.dataset.started=1;play()}})},{threshold:.5}).observe(card);
+    }
+  })();
   var tiles=document.querySelectorAll('.tile');
   tiles.forEach(function(t){
     t.addEventListener('mousemove',function(e){var r=t.getBoundingClientRect();t.style.setProperty('--x',(e.clientX-r.left)+'px');t.style.setProperty('--y',(e.clientY-r.top)+'px');});
